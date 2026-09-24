@@ -129,8 +129,6 @@ paths:
       tags:
       - schema
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -158,8 +156,6 @@ paths:
       tags:
       - weather
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -182,8 +178,6 @@ paths:
       tags:
       - weather
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -212,8 +206,6 @@ paths:
               $ref: '#/components/schemas/WeatherFetch'
         required: true
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '201':
@@ -313,11 +305,3 @@ components:
       - pressure
       - temperature
       - weather
-  securitySchemes:
-    basicAuth:
-      type: http
-      scheme: basic
-    cookieAuth:
-      type: apiKey
-      in: cookie
-      name: sessionid
